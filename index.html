@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TECHZONE | Periféricos Gamer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">
+            <h1>TECH<span>ZONE</span></h1>
+            <p>O próximo nível começa aqui.</p>
+        </div>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="carrinho-topo" onclick="mostrarCarrinho()">
+            🛒 Carrinho (<span id="quantidade">0</span>)
+        </button>
+    </header>
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section id="inicio" class="banner">
+            <div class="banner-conteudo">
+
+                <p class="destaque">TECNOLOGIA E PERFORMANCE</p>
+
+                <h2>
+                    MONTE SEU SETUP
+                    <span>GAMER!</span>
+                </h2>
+
+                <p>
+                    Encontre os melhores periféricos
+                    para transformar sua experiência.
+                </p>
+
+                <a href="#produtos" class="botao-banner">
+                    Ver produtos
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE PRODUTOS -->
+        <section id="produtos" class="secao-produtos">
+
+            <div class="titulo-secao">
+                <p>NOSSA LOJA</p>
+                <h2>Produtos em destaque</h2>
+            </div>
+
+            <div class="grade-produtos">
+
+                <!-- PRODUTO 1 -->
+                <article class="produto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600"
+                        alt="Mouse gamer RGB">
+
+                    <div class="produto-info">
+
+                        <span class="categoria">MOUSE</span>
+
+                        <h3>Mouse Gamer RGB</h3>
+
+                        <p>Alta precisão e iluminação RGB.</p>
+
+                        <strong>R$ 149,90</strong>
+
+                        <button onclick="adicionarCarrinho('Mouse Gamer RGB', 149.90)">
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- PRODUTO 2 -->
+                <article class="produto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1595225476474-87563907a212?w=600"
+                        alt="Teclado mecânico">
+
+                    <div class="produto-info">
+
+                        <span class="categoria">TECLADO</span>
+
+                        <h3>Teclado Mecânico</h3>
+
+                        <p>Switches precisos e design moderno.</p>
+
+                        <strong>R$ 289,90</strong>
+
+                        <button onclick="adicionarCarrinho('Teclado Mecânico', 289.90)">
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- PRODUTO 3 -->
+                <article class="produto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1599669454699-248893623440?w=600"
+                        alt="Headset gamer">
+
+                    <div class="produto-info">
+
+                        <span class="categoria">HEADSET</span>
+
+                        <h3>Headset Gamer</h3>
+
+                        <p>Som imersivo e microfone integrado.</p>
+
+                        <strong>R$ 199,90</strong>
+
+                        <button onclick="adicionarCarrinho('Headset Gamer', 199.90)">
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- PRODUTO 4 -->
+                <article class="produto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
+                        alt="Mouse sem fio">
+
+                    <div class="produto-info">
+
+                        <span class="categoria">MOUSE</span>
+
+                        <h3>Mouse Sem Fio</h3>
+
+                        <p>Liberdade de movimento e conforto.</p>
+
+                        <strong>R$ 119,90</strong>
+
+                        <button onclick="adicionarCarrinho('Mouse Sem Fio', 119.90)">
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- PRODUTO 5 -->
+                <article class="produto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600"
+                        alt="Fone de ouvido">
+
+                    <div class="produto-info">
+
+                        <span class="categoria">ÁUDIO</span>
+
+                        <h3>Fone de Ouvido</h3>
+
+                        <p>Conforto e qualidade sonora.</p>
+
+                        <strong>R$ 89,90</strong>
+
+                        <button onclick="adicionarCarrinho('Fone de Ouvido', 89.90)">
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+                </article>
+
+                <!-- PRODUTO 6 -->
+                <article class="produto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=600"
+                        alt="Controle gamer">
+
+                    <div class="produto-info">
+
+                        <span class="categoria">CONTROLE</span>
+
+                        <h3>Controle Gamer</h3>
+
+                        <p>Precisão e conforto para jogar.</p>
+
+                        <strong>R$ 179,90</strong>
+
+                        <button onclick="adicionarCarrinho('Controle Gamer', 179.90)">
+                            Adicionar ao carrinho
+                        </button>
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CARRINHO DE COMPRAS -->
+        <section id="carrinho" class="secao-carrinho">
+
+            <h2>🛒 Meu carrinho</h2>
+
+            <div id="itens-carrinho">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+
+            <h3>
+                Total:
+                <span id="total">R$ 0,00</span>
+            </h3>
+
+            <div class="botoes-carrinho">
+
+                <button onclick="limparCarrinho()" class="limpar">
+                    Limpar carrinho
+                </button>
+
+                <button onclick="finalizarCompra()" class="finalizar">
+                    Finalizar compra
+                </button>
+
+            </div>
+        </section>
+
+        <!-- SOBRE A LOJA -->
+        <section id="sobre" class="sobre">
+
+            <h2>Sobre a TECHZONE</h2>
+
+            <p>
+                A TECHZONE é uma loja especializada em periféricos
+                e acessórios para computadores. Nosso objetivo é
+                oferecer produtos de qualidade para gamers,
+                estudantes e profissionais que buscam tecnologia,
+                conforto e desempenho.
+            </p>
+
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="contato">
+
+            <h2>Entre em contato</h2>
+
+            <form id="form-contato">
+
+                <label for="nome">Nome</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required>
+
+                <label for="email">E-mail</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required>
+
+                <label for="assunto">Assunto</label>
+
+                <select id="assunto" name="assunto">
+
+                    <option value="duvida">Dúvida</option>
+                    <option value="produto">Produto</option>
+                    <option value="compra">Compra</option>
+                    <option value="outro">Outro</option>
+
+                </select>
+
+                <label for="mensagem">Mensagem</label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    placeholder="Digite sua mensagem"
+                    required></textarea>
+
+                <button type="submit">
+                    Enviar mensagem
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <h2>TECHZONE</h2>
+
+        <p>©️ 2026 TECHZONE - Todos os direitos reservados.</p>
+
+        <p>Periféricos para quem busca o próximo nível.</p>
+
+    </footer>
+
+    <!-- ARQUIVO JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
